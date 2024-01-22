@@ -1,0 +1,411 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="./static/css/output.css" rel="stylesheet">
+</head>
+<body>
+    
+
+    <nav class="bg-white shadow border border-gray-200">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between md:justify-normal  p-6">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./static/imgs/Group.svg" class="h-8" alt="Flowbite Logo" />
+            </a>
+            <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-multi-level" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto ml-16" id="navbar-multi-level">
+                <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-slate-900 text-base font-medium font-roboto rounded md:bg-transparent md:p-0 " aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-slate-600 font-normal font-roboto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-800 md:p-0">About</a>
+                    </li>
+                    <li>
+                        <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 px-3 text-gray-600 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto ">Technology
+                            <svg class="w-2.5 h-2.5 ms-2.5 stroke-slate-700" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                            </svg>
+                        </button>
+                        <!-- Dropdown menu -->
+                        <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 ">
+                            <ul class="py-2 text-sm text-slate-600 font-normal font-roboto" aria-labelledby="dropdownLargeButton">
+                                <li>
+                                    <a href="#" class="block px-4 py-2 hover:bg-gray-100 ">Dashboard</a>
+                                </li>
+                                <li aria-labelledby="dropdownNavbarLink">
+                                    <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" class="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 ">Technology<svg class="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                                        </svg>
+                                    </button>
+                                    <div id="doubleDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                        <ul class="py-2 text-sm text-slate-600 font-normal font-roboto " aria-labelledby="doubleDropdownButton">
+                                            <li>
+                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Overview</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">My downloads</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Billing</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="block px-4 py-2 hover:bg-gray-100">Rewards</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <li>
+                                        <a href="#" class="block px-4 py-2 hover:bg-gray-100">Earnings</a>
+                                    </li>
+                                </li>
+                            </ul>
+                            <div class="py-1">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 ">Sign out</a>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-slate-600 text-base font-normal font-roboto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-800 md:p-0">Solutions</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-slate-600 text-base font-normal font-roboto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-800 md:p-0">Impact</a>
+                    </li>
+                    <li>
+                        <a href="#" class="block py-2 px-3 text-slate-600 text-base font-normal font-roboto hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-slate-800 md:p-0">Success Stories</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex flex-col items-center pt-20 from-sky-50/75 to-white 2xl:px-80" style="background-image: linear-gradient(to bottom, var(--tw-gradient-stops)), url('./static/imgs/f5b5393b79507345340cc1a20319d74a.png'); background-size: 91rem;">
+        <h1 class="text-center text-slate-900 text-4xl font-bold font-roboto leading-[3rem] mb-6 px-36">
+            A platform for Internet service provider's to delight customers and grow through power moves
+        </h1>
+
+        <p class="text-center text-slate-600 text-lg font-normal font-roboto mb-12 px-52">
+            Empowering Internet service providers with advanced AI and ML tools streamlines technical troubleshooting, reducing it from hours to minutes. Our Super App transforms community internet access, while Ad-based free Wi-Fi solutions bridge the digital gap, connecting underserved communities.
+        </p>
+
+        <div class="flex items-center space-x-3 mb-12">
+            <a href="#" class="text-slate-100 text-base font-medium font-roboto bg-blue-900  hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-md px-16 py-2.5 mb-2 focus:outline-none">Try the App</a>
+            <a href="#" class="text-slate-900 text-base font-medium font-roboto bg-slate-100 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-md px-12 py-2.5 mb-2 focus:outline-none border border-stone-300">Contact Sales</a>
+        </div>
+        
+        <img class="w-[78%]" src="./static/imgs/MacBook Air - 7 (1) 1.png" alt="">
+    </div>
+
+    <div class="flex flex-col items-center mt-14 2xl:px-80">
+        <p class="text-center text-slate-900 text-xl font-normal font-roboto px-[21rem] mb-20">
+            Trusted by Link3, APNIC, and Microsoft, our platform is the choice for teams building agents across every channel and use case.
+        </p>
+        <div class="flex items-center space-x-16">
+            <img class="h-14" src="./static/imgs/image 682.png" alt="">
+            <img class="h-8" src="./static/imgs/image 683(3).png" alt="">
+            <img class="h-14" src="./static/imgs/image 684.png" alt="">
+
+        </div>
+    </div>
+
+    <div class="flex space-x-3 2xl:space-x-5 2xl:items-center mt-14">
+        <img class="w-full" src="./static/imgs/Frame 1000003499 (1).svg" alt="">
+        <div class="w-full pt-4 pr-28">
+            <h1 class="text-slate-900 text-[2rem] leading-10 font-semibold font-roboto mb-7">
+                Enable Users To Fine-Tune Their Connectivity With Next-Level Controls
+            </h1>
+
+            <h1 class="text-slate-900 text-3xl font-semibold font-roboto mb-5">CXM Dashboard</h1>
+
+            <div class="inline-flex items-start mb-5">
+                <svg class="h-7 2xl:h-8 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Frame">
+                        <path id="Vector" d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2ZM15.22 8.97L10.75 13.44L8.78 11.47C8.63783 11.3375 8.44978 11.2654 8.25548 11.2688C8.06118 11.2723 7.87579 11.351 7.73838 11.4884C7.60097 11.6258 7.52225 11.8112 7.51883 12.0055C7.5154 12.1998 7.58752 12.3878 7.72 12.53L10.22 15.03C10.3606 15.1705 10.5512 15.2493 10.75 15.2493C10.9488 15.2493 11.1394 15.1705 11.28 15.03L16.28 10.03C16.3537 9.96134 16.4128 9.87854 16.4538 9.78654C16.4948 9.69454 16.5168 9.59522 16.5186 9.49452C16.5204 9.39382 16.5018 9.29379 16.4641 9.2004C16.4264 9.10701 16.3703 9.02218 16.299 8.95096C16.2278 8.87974 16.143 8.8236 16.0496 8.78588C15.9562 8.74816 15.8562 8.72963 15.7555 8.73141C15.6548 8.73318 15.5555 8.75523 15.4635 8.79622C15.3715 8.83721 15.2887 8.89631 15.22 8.97Z" fill="url(#paint0_linear_1548_2089)"/>
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_1548_2089" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2338A0"/>
+                            <stop offset="1" stop-color="#005ED9"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                
+                <p class="text-slate-600 text-xl font-normal font-Inter">
+                    Optimize data collection time to reduce duration and enhance efficiency.
+                </p>
+            </div>
+
+            <div class="inline-flex items-start mb-5">
+                <svg class="w-12 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Frame">
+                        <path id="Vector" d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2ZM15.22 8.97L10.75 13.44L8.78 11.47C8.63783 11.3375 8.44978 11.2654 8.25548 11.2688C8.06118 11.2723 7.87579 11.351 7.73838 11.4884C7.60097 11.6258 7.52225 11.8112 7.51883 12.0055C7.5154 12.1998 7.58752 12.3878 7.72 12.53L10.22 15.03C10.3606 15.1705 10.5512 15.2493 10.75 15.2493C10.9488 15.2493 11.1394 15.1705 11.28 15.03L16.28 10.03C16.3537 9.96134 16.4128 9.87854 16.4538 9.78654C16.4948 9.69454 16.5168 9.59522 16.5186 9.49452C16.5204 9.39382 16.5018 9.29379 16.4641 9.2004C16.4264 9.10701 16.3703 9.02218 16.299 8.95096C16.2278 8.87974 16.143 8.8236 16.0496 8.78588C15.9562 8.74816 15.8562 8.72963 15.7555 8.73141C15.6548 8.73318 15.5555 8.75523 15.4635 8.79622C15.3715 8.83721 15.2887 8.89631 15.22 8.97Z" fill="url(#paint0_linear_1548_2089)"/>
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_1548_2089" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2338A0"/>
+                            <stop offset="1" stop-color="#005ED9"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                
+                <p class="text-slate-600 text-xl font-normal font-Inter">
+                    With real-time data, tackle customer problems swiftly, slashing the time it takes to resolve from several hours to just a few minutes
+                </p>
+            </div>
+
+            <div class="inline-flex items-start mb-5">
+                <svg class="w-10 mr-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="Frame">
+                        <path id="Vector" d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2ZM15.22 8.97L10.75 13.44L8.78 11.47C8.63783 11.3375 8.44978 11.2654 8.25548 11.2688C8.06118 11.2723 7.87579 11.351 7.73838 11.4884C7.60097 11.6258 7.52225 11.8112 7.51883 12.0055C7.5154 12.1998 7.58752 12.3878 7.72 12.53L10.22 15.03C10.3606 15.1705 10.5512 15.2493 10.75 15.2493C10.9488 15.2493 11.1394 15.1705 11.28 15.03L16.28 10.03C16.3537 9.96134 16.4128 9.87854 16.4538 9.78654C16.4948 9.69454 16.5168 9.59522 16.5186 9.49452C16.5204 9.39382 16.5018 9.29379 16.4641 9.2004C16.4264 9.10701 16.3703 9.02218 16.299 8.95096C16.2278 8.87974 16.143 8.8236 16.0496 8.78588C15.9562 8.74816 15.8562 8.72963 15.7555 8.73141C15.6548 8.73318 15.5555 8.75523 15.4635 8.79622C15.3715 8.83721 15.2887 8.89631 15.22 8.97Z" fill="url(#paint0_linear_1548_2089)"/>
+                    </g>
+                    <defs>
+                        <linearGradient id="paint0_linear_1548_2089" x1="12" y1="2" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#2338A0"/>
+                            <stop offset="1" stop-color="#005ED9"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                
+                <p class="text-slate-600 text-xl font-normal font-Inter">
+                    Grant customers autonomy in shaping their experience, ensuring personalized and reliable interaction.
+                </p>
+            </div>
+
+            <div class="inline-flex items-start mb-5">
+                <div class="mr-9 2xl:mr-13"></div>
+
+                <a href="#" class="inline-flex items-center text-slate-600 text-base font-semibold font-Inter">
+                    Learn More
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="icon / jam-icons / outline &#38; logos / arrow-right">
+                            <path id="Vector" d="M12.525 7.93654L9.58304 4.99462C9.44737 4.85416 9.3723 4.66602 9.374 4.47074C9.3757 4.27546 9.45402 4.08866 9.59211 3.95057C9.7302 3.81248 9.91701 3.73415 10.1123 3.73245C10.3076 3.73075 10.4957 3.80582 10.6362 3.94149L14.8494 8.15476C14.9188 8.22377 14.9739 8.30582 15.0115 8.39618C15.0491 8.48655 15.0684 8.58346 15.0684 8.68133C15.0684 8.7792 15.0491 8.8761 15.0115 8.96647C14.9739 9.05684 14.9188 9.13889 14.8494 9.20789L10.6362 13.4212C10.5675 13.4923 10.4853 13.549 10.3944 13.5881C10.3036 13.6271 10.2058 13.6476 10.1069 13.6485C10.008 13.6494 9.90996 13.6305 9.81843 13.5931C9.7269 13.5556 9.64374 13.5003 9.57381 13.4304C9.50388 13.3605 9.44858 13.2773 9.41113 13.1858C9.37368 13.0942 9.35484 12.9962 9.35569 12.8973C9.35655 12.7984 9.3771 12.7007 9.41613 12.6098C9.45517 12.5189 9.51191 12.4367 9.58304 12.368L12.525 9.42612H5.38541C5.18788 9.42612 4.99844 9.34765 4.85877 9.20797C4.71909 9.0683 4.64062 8.87886 4.64062 8.68133C4.64062 8.4838 4.71909 8.29436 4.85877 8.15468C4.99844 8.01501 5.18788 7.93654 5.38541 7.93654H12.525Z" fill="#475569"/>
+                        </g>
+                    </svg>                        
+                </a>
+            </div>
+
+            <hr class="h-0.5 mb-7 border-0 bg-gradient-to-r from-[#D6A1F0] via-[#86C7FA0D] to-[#FFFFFF0D]">
+
+            <img class="h-10 mb-8" src="./static/imgs/image 682.png" alt="">
+
+            <p class="text-slate-600 text-base font-normal font-roboto leading-normal pr-16 mb-5">Streamline data collection for efficiency, empower junior engineers to make swift decisions, and prioritize customer autonomy for a personalized and reliable experience.</p>
+
+            <div class="inline-flex items-center">
+                <img class="h-11 mr-3" src="./static/imgs/image 719.png" alt="">
+                <div>
+                    <h1 class="text-slate-900 text-lg font-semibold font-roboto">Sayeda Sayed Tasnuva</h1>
+                    <p  class="text-slate-600 text-xs font-normal   font-roboto">Marketing Officer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex space-x-24 items-center from-white/75 to-white/75 mt-20 px-20 2xl:px-[25rem]" style="background-image: linear-gradient(to bottom, var(--tw-gradient-stops)), url('./static/imgs/f5b5393b79507345340cc1a20319d74a.png'); background-size: 91rem;">
+        <div class="w-full">
+            <h1 class="text-slate-900 text-4xl leading-10 font-semibold font-roboto mb-2">
+                Super App
+            </h1>
+
+            <p class="text-slate-600 text-xl font-normal font-roboto leading-loose mb-3">Enhance Connectivity, Empower Analysis. Elevate your internet experience with our mobile app, providing real-time insights into your ISP performance and delivering swift solutions for seamless connectivity.</p>
+            
+            <a href="#" class="inline-flex items-center text-slate-600 text-base font-semibold font-Inter mb-7">
+                Learn More
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon / jam-icons / outline &#38; logos / arrow-right">
+                        <path id="Vector" d="M12.525 7.93654L9.58304 4.99462C9.44737 4.85416 9.3723 4.66602 9.374 4.47074C9.3757 4.27546 9.45402 4.08866 9.59211 3.95057C9.7302 3.81248 9.91701 3.73415 10.1123 3.73245C10.3076 3.73075 10.4957 3.80582 10.6362 3.94149L14.8494 8.15476C14.9188 8.22377 14.9739 8.30582 15.0115 8.39618C15.0491 8.48655 15.0684 8.58346 15.0684 8.68133C15.0684 8.7792 15.0491 8.8761 15.0115 8.96647C14.9739 9.05684 14.9188 9.13889 14.8494 9.20789L10.6362 13.4212C10.5675 13.4923 10.4853 13.549 10.3944 13.5881C10.3036 13.6271 10.2058 13.6476 10.1069 13.6485C10.008 13.6494 9.90996 13.6305 9.81843 13.5931C9.7269 13.5556 9.64374 13.5003 9.57381 13.4304C9.50388 13.3605 9.44858 13.2773 9.41113 13.1858C9.37368 13.0942 9.35484 12.9962 9.35569 12.8973C9.35655 12.7984 9.3771 12.7007 9.41613 12.6098C9.45517 12.5189 9.51191 12.4367 9.58304 12.368L12.525 9.42612H5.38541C5.18788 9.42612 4.99844 9.34765 4.85877 9.20797C4.71909 9.0683 4.64062 8.87886 4.64062 8.68133C4.64062 8.4838 4.71909 8.29436 4.85877 8.15468C4.99844 8.01501 5.18788 7.93654 5.38541 7.93654H12.525Z" fill="#475569"/>
+                    </g>
+                </svg>                        
+            </a>
+            
+            <hr class="h-0.5 mb-7 border-0 bg-gradient-to-r from-[#D6A1F0] via-[#86C7FA0D] to-[#FFFFFF0D]">
+            
+            <img class="h-10 mb-8" src="./static/imgs/image 682.png" alt="">
+            
+            <p class="text-slate-600 text-base font-normal font-roboto leading-normal pr-16 mb-5">Streamline data collection for efficiency, empower junior engineers to make swift decisions, and prioritize customer autonomy for a personalized and reliable experience.</p>
+            
+            <div class="inline-flex items-center">
+                <img class="h-11 mr-3" src="./static/imgs/image 719.png" alt="">
+                <div>
+                    <h1 class="text-slate-900 text-lg font-semibold font-roboto">Sayeda Sayed Tasnuva</h1>
+                    <p  class="text-slate-600 text-xs font-normal   font-roboto">Marketing Officer</p>
+                </div>
+            </div>
+        </div>
+
+        <img class="w-full" src="./static/imgs/Component 1.png" alt="">
+    </div>
+    
+    <div class="flex space-x-16 2xl:space-x-40 2xl:items-center mt-28">
+        <img class="w-full" src="./static/imgs/Group 1000003750.png" alt="">
+
+        <div class="w-full">
+            <h1 class="text-slate-900 text-4xl leading-10 font-semibold font-roboto mb-2">
+                Ad Based WIFI
+            </h1>
+
+            <p class="text-slate-600 text-xl font-normal font-roboto leading-normal pr-24 2xl:pr-64 mb-3">We strategically advertise Link3 on our Janata WiFi captive portal, offering customers free WiFi while efficiently bypassing BTRC regulations. Ad-based WiFi not only reaches our target audience but also does so at a cost significantly lower, making it a reliable and cost-effective approach.</p>
+            
+            <a href="#" class="inline-flex items-center text-slate-600 text-base font-semibold font-Inter mb-7">
+                Learn More
+                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon / jam-icons / outline &#38; logos / arrow-right">
+                        <path id="Vector" d="M12.525 7.93654L9.58304 4.99462C9.44737 4.85416 9.3723 4.66602 9.374 4.47074C9.3757 4.27546 9.45402 4.08866 9.59211 3.95057C9.7302 3.81248 9.91701 3.73415 10.1123 3.73245C10.3076 3.73075 10.4957 3.80582 10.6362 3.94149L14.8494 8.15476C14.9188 8.22377 14.9739 8.30582 15.0115 8.39618C15.0491 8.48655 15.0684 8.58346 15.0684 8.68133C15.0684 8.7792 15.0491 8.8761 15.0115 8.96647C14.9739 9.05684 14.9188 9.13889 14.8494 9.20789L10.6362 13.4212C10.5675 13.4923 10.4853 13.549 10.3944 13.5881C10.3036 13.6271 10.2058 13.6476 10.1069 13.6485C10.008 13.6494 9.90996 13.6305 9.81843 13.5931C9.7269 13.5556 9.64374 13.5003 9.57381 13.4304C9.50388 13.3605 9.44858 13.2773 9.41113 13.1858C9.37368 13.0942 9.35484 12.9962 9.35569 12.8973C9.35655 12.7984 9.3771 12.7007 9.41613 12.6098C9.45517 12.5189 9.51191 12.4367 9.58304 12.368L12.525 9.42612H5.38541C5.18788 9.42612 4.99844 9.34765 4.85877 9.20797C4.71909 9.0683 4.64062 8.87886 4.64062 8.68133C4.64062 8.4838 4.71909 8.29436 4.85877 8.15468C4.99844 8.01501 5.18788 7.93654 5.38541 7.93654H12.525Z" fill="#475569"/>
+                    </g>
+                </svg>                        
+            </a>
+            
+            <hr class="h-0.5 mb-7 border-0 bg-gradient-to-r from-[#D6A1F0] via-[#86C7FA0D] to-[#FFFFFF0D]">
+            
+            <img class="h-10 mb-8" src="./static/imgs/image 683(3).png" alt="">
+            
+            <p class="text-slate-600 text-base font-normal font-roboto leading-normal pr-36 2xl:pr-[25rem] mb-5">Streamline data collection for efficiency, empower junior engineers to make swift decisions, and prioritize customer autonomy for a personalized and reliable experience.</p>
+            
+            <div class="inline-flex items-center">
+                <img class="h-11 mr-3" src="./static/imgs/image 719.png" alt="">
+                <div>
+                    <h1 class="text-slate-900 text-lg font-semibold font-roboto">Sayeda Sayed Tasnuva</h1>
+                    <p  class="text-slate-600 text-xs font-normal   font-roboto">Marketing Officer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="from-white/75 to-white/75 mt-28 py-10 px-12 2xl:px-[24rem]" style="background-image: linear-gradient(to bottom, var(--tw-gradient-stops)), url('./static/imgs/f5b5393b79507345340cc1a20319d74a.png'); background-size: 91rem;">
+        <h1 class="text-slate-900 text-4xl font-semibold font-roboto mb-5">Blog & Case Study</h1>
+
+        <p class="text-gray-500 text-lg font-normal font-roboto leading-6 w-[46%] mb-16">Explore Tech Trends and Insights: Uncover the Latest in Innovation, News, and Expert Perspectives on Our Blog & Case Study.</p>
+
+        <div class="grid grid-cols-3 gap-x-8">
+            <div>
+                <img class="w-full mb-2" src="./static/imgs/Rectangle 1319.png" alt="">
+                <h1 class="text-slate-900 text-2xl font-semibold font-roboto mb-3">How I Won Singapore's GPT-4 Prompt Engineering Competition</h1>
+
+                <div class="inline-flex items-center mb-3">
+                    <img class="h-8 mr-3 rounded-full" src="./static/imgs/Mainul_Profile_Photo.jpeg" alt="">
+                    <p class="text-slate-900 text-sm font-medium font-roboto">Mainul Hasan Alin</p>
+                </div>
+
+                <p class="text-slate-600 text-base font-normal font-Inter leading-normal mb-4">Last month, I had the incredible honor of winning Singapore's first ever GPT-4 Prompt Engineering competition, which brought...</p>
+                <a class="text-slate-900 text-base font-semibold font-roboto underline underline-offset-8" href="#">
+                    View Post
+                </a>
+            </div>
+            <div>
+                <img class="w-full mb-2" src="./static/imgs/Rectangle 1319.png" alt="">
+                <h1 class="text-slate-900 text-2xl font-semibold font-roboto mb-3">Free wifi for the crowd at Durga Puja 2022 festival venue</h1>
+
+                <div class="inline-flex items-center mb-3">
+                    <img class="h-8 mr-3 rounded-full" src="./static/imgs/Mainul_Profile_Photo.jpeg" alt="">
+                    <p class="text-slate-900 text-sm font-medium font-roboto">Mainul Hasan Alin</p>
+                </div>
+
+                <p class="text-slate-600 text-base font-normal font-Inter leading-normal mb-4">Last month, I had the incredible honor of winning Singapore's first ever GPT-4 Prompt Engineering competition, which brought...</p>
+                <a class="text-slate-900 text-base font-semibold font-roboto underline underline-offset-8" href="#">
+                    View Post
+                </a>
+            </div>
+            <div>
+                <img class="w-full mb-2" src="./static/imgs/Rectangle 1319.png" alt="">
+                <h1 class="text-slate-900 text-2xl font-semibold font-roboto mb-3">How I Won Singapore's GPT-4 Prompt Engineering Competition</h1>
+
+                <div class="inline-flex items-center mb-3">
+                    <img class="h-8 mr-3 rounded-full" src="./static/imgs/Mainul_Profile_Photo.jpeg" alt="">
+                    <p class="text-slate-900 text-sm font-medium font-roboto">Mainul Hasan Alin</p>
+                </div>
+
+                <p class="text-slate-600 text-base font-normal font-Inter leading-normal mb-4">Last month, I had the incredible honor of winning Singapore's first ever GPT-4 Prompt Engineering competition, which brought...</p>
+                <a class="text-slate-900 text-base font-semibold font-roboto underline underline-offset-8" href="#">
+                    View Post
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="rounded-2xl shadow mx-10 mt-8 mb-20" style="background-image: url('./static/imgs/f5b5393b79507345340cc1a20319d74a.png'); background-size: 34rem;">
+        <div class="bg-gradient-to-r from-white/50 via-slate-100/50 to-blue-100 rounded-2xl pt-20 pb-4 pl-10">
+            <h1 class="text-slate-900 text-5xl font-semibold font-Inter">In Pursuit of the Right Partner</h1>
+            <p  class="text-slate-600 text-2xl font-normal font-roboto mb-12">To Deploy Your Own Wireless Services?</p>
+            <div class="flex items-center space-x-3 mb-12">
+                <a href="#" class="text-slate-100 text-base font-medium font-roboto bg-blue-900  hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-md px-16 py-2.5 mb-2 focus:outline-none">Try the App</a>
+                <a href="#" class="text-slate-900 text-base font-medium font-roboto bg-white     hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-md px-12 py-2.5 mb-2 focus:outline-none border border-stone-300">Contact Sales</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-blue-900 pt-16 px-12 2xl:px-72">
+        <div class="flex justify-between w-full mb-20">
+            <img class="h-14" src="./static/imgs/Group(1).svg" alt="">
+
+            <div class="flex flex-col">
+                <h1 class="text-white text-base font-bold font-Inter mb-4">Quick Links</h1>
+                <a  href="#" class="text-white text-base font-normal font-Inter mb-4">About</a>
+                <a  href="#" class="text-white text-base font-normal font-Inter mb-4">Technology</a>
+                <a  href="#" class="text-white text-base font-normal font-Inter mb-4">Solutions</a>
+                <a  href="#" class="text-white text-base font-normal font-Inter mb-4">Success Stories</a>
+                <a  href="#" class="text-white text-base font-normal font-Inter     ">Blog and News</a>
+            </div>
+
+            <div class="flex flex-col">
+                <h1 class="text-white text-base font-bold font-Inter mb-4">Technology</h1>
+                <a  href="#" class="text-white text-base font-normal font-Inter mb-4">Captive Portal</a>
+                <a  href="#" class="text-white text-base font-normal font-Inter mb-4">ISP Customer App</a>
+                <a  href="#" class="text-white text-base font-normal font-Inter     ">Roaming Dashboard</a>
+            </div>
+
+            <div class="flex flex-col">
+                <h1 class="text-white text-base font-bold font-Inter mb-4">Quick Support</h1>
+                <div class="flex items-center mb-4">
+                    <img class="h-6 mr-1.5" src="./static/imgs/Frame(3).svg" alt="">
+                    <p  href="#" class="text-white text-base font-normal font-Inter">contact@janatawifi.com <p>
+                </div>
+
+                <div class="flex items-center mb-4">
+                    <img class="h-6 mr-1.5" src="./static/imgs/Frame(4).svg" alt="">
+                    <p  href="#" class="text-white text-base font-normal font-Inter">+880 1915-601725<p>
+                </div>
+
+                <div class="flex items-center">
+                    <img class="h-6 mr-1.5" src="./static/imgs/Frame(5).svg" alt="">
+                    <p  href="#" class="text-white text-base font-normal font-Inter">Banani, Dhaka, Bangladesh<p>
+                </div>
+            </div>
+
+            <div class="flex flex-col  w-[26%]">
+                <h1 class="text-white text-xl font-semibold font-Inter">For Latest News and Updates</h1>
+                <p  class="text-justify text-white text-sm font-normal font-Inter mb-8">Subscribe and be the first to know about all our recent news and events.</p>
+                <div class="flex w-full">
+                    <input   class="p-2.5 w-full z-20 text-xs text-black    bg-white       rounded-l                           focus:ring-blue-500 focus:border-blue-500" placeholder="Your email">
+                    <button  class="px-8 py-3         text-xs text-zinc-800 bg-neutral-200 rounded      font-bold font-Manrope focus:ring-blue-300 hover:bg-neutral-400 focus:ring-4 focus:outline-none  -translate-x-1">
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="h-px border-0 bg-white">
+
+        <div class="flex justify-between py-10 px-20">
+            <p class="text-white text-base font-normal font-roboto">© 2024 Janata WiFi Ltd. - All Rights Reserved.</p>
+            <div class="inline-flex space-x-4">
+                <img class="h-6" src="./static/imgs/youtube.svg" alt="">
+                <img class="h-6" src="./static/imgs/facebook.svg" alt="">
+                <img class="h-6" src="./static/imgs/twitter.svg" alt="">
+                <img class="h-6" src="./static/imgs/instagram.svg" alt="">
+                <img class="h-6" src="./static/imgs/linkedin.svg" alt="">
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</body>
+</html>
