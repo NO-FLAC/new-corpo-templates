@@ -7,10 +7,10 @@ const app = express();
 const port = 3000;
 
 // Serve static files from the "/home/no_flac/Work/new_corpo_design" directory
-app.use(express.static('/home/no_flac/Work/new_corpo_design/templates/'));
+app.use(express.static('/home/daiyan/Work/new-corpo-templates/templates'));
 
 app.get('/', (req, res) => {
-  const filePath = '/home/no_flac/Work/new_corpo_design/templates/home.html';
+  const filePath = '/home/daiyan/Work/new-corpo-templates/templates/impact.html';
   res.sendFile(filePath);
 });
 
